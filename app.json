@@ -21,9 +21,9 @@
       }
     },
     "addons": [
-        "heroku-postgresql:standard-0"  // أو خطة مدفوعة أخرى حسب احتياجك
+        "heroku-postgresql:standard-0" 
     ],
     "scripts": {
-        "postdeploy": "python bot.py"  // أو اسم ملف السكربت الخاص بك
+        "postdeploy": "python bot.py"  
     }
 }
