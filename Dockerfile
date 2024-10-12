@@ -1,17 +1,18 @@
+# استخدام صورة Python 3.8
+FROM python:3.8-slim-buster
 
-FROM python:3.9
+# تثبيت FFmpeg (الذي يحتوي على ffprobe)
+RUN apt-get update && apt-get install -y ffmpeg
 
-
+# تعيين مسار العمل داخل الحاوية
 WORKDIR /app
 
-
-COPY requirements.txt .
-
-
+# نسخ ملف المتطلبات وتثبيتها
+COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-
+# نسخ كل الملفات إلى الحاوية
 COPY . .
 
-
-CMD ["python", "bot.py"]  
+# تشغيل التطبيق (مثل البوت)
+CMD ["python", "bot.py"]
