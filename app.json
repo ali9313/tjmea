@@ -20,7 +20,7 @@
         "size": "basic"
       }
     },
-    "addons": [
+    "DATABASE_URL": [
         "heroku-postgresql:standard-0" 
     ],
     "scripts": {
