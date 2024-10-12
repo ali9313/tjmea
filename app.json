@@ -1,15 +1,14 @@
 {
-  "name": "Your Bot Name",  // أدخل هنا اسم البوت الخاص بك
+  "name": "Your Bot Name",
   "description": "A Telegram bot to collect points.",
   "env": {
     "BOT_TOKEN": {
       "description": "Your Telegram Bot Token",
       "required": true
     }
-    // لا حاجة لإضافة DATABASE_URL هنا
   },
   "addons": [
-    "heroku-postgresql:hobby-dev"  // يمكنك استبدالها بخطة مدفوعة حسب احتياجك
+    "heroku-postgresql:standard-0"  // اختر خطة Standard 0
   ],
   "scripts": {
     "postdeploy": "python bot.py"
