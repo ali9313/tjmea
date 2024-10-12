@@ -12,6 +12,11 @@
             "description": "توكن البوت",
             "value": "",
             "required": true
+        },
+        "DATABASE_URL": {
+            "description": "الرابط الخارجي الذي تريد استخدامه",
+            "value": "",
+            "required": true
         }
     },
     "formation": {
@@ -20,9 +25,6 @@
         "size": "basic"
       }
     },
-    "DATABASE_URL": [
-        "heroku-postgresql:standard-0" 
-    ],
     "scripts": {
         "postdeploy": "python bot.py"  
     }
