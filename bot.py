@@ -4,7 +4,7 @@ import psycopg2
 import telebot
 
 # إعدادات البوت
-BOT_TOKEN = os.environ.get('BOT_TOKEN')  # تأكد من إعداد هذا في Heroku
+BOT_TOKEN = os.environ.get('TOKEN')  # تأكد من إعداد هذا في Heroku
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # إعداد قاعدة بيانات PostgreSQL
