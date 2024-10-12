@@ -1,16 +1,29 @@
 {
-  "name": "Your Bot Name",
-  "description": "A Telegram bot to collect points.",
-  "env": {
-    "BOT_TOKEN": {
-      "description": "Your Telegram Bot Token",
-      "required": true
+    "name": "ALI BOT",
+    "description": "اهلا بكم جميعا !",
+    "stack": "container",
+    "repository": "https://github.com/ali9313/tjmea",
+    "keywords": [
+        "telegrambot"
+    ],
+    "website": "https://github.com/ali9313/tjmea",
+    "env": {
+        "TOKEN": {
+            "description": "توكن البوت",
+            "value": "",
+            "required": true
+        }
+    },
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "basic"
+      }
+    },
+    "addons": [
+        "heroku-postgresql:standard-0"  // أو خطة مدفوعة أخرى حسب احتياجك
+    ],
+    "scripts": {
+        "postdeploy": "python bot.py"  // أو اسم ملف السكربت الخاص بك
     }
-  },
-  "addons": [
-    "heroku-postgresql:standard-0"  // اختر خطة Standard 0
-  ],
-  "scripts": {
-    "postdeploy": "python bot.py"
-  }
 }
