@@ -20,12 +20,9 @@
         }
     },
     "formation": {
-      "worker": {
-        "quantity": 1,
-        "size": "basic"
-      }
-    },
-    "scripts": {
-        "postdeploy": "python bot.py"  
+        "worker": {
+            "quantity": 1,
+            "size": "basic"
+        }
     }
 }
